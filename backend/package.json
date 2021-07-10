@@ -8,10 +8,10 @@
     "db_drop": "sequelize-cli db:drop",
     "db_migrate": "node_modules/.bin/sequelize db:migrate",
     "db_create": "sequelize-cli db:create",
-    "recreate_db": " NODE_ENV=test npm run db_drop &&NODE_ENV=test npm run db_create",
+    "recreate_db": "NODE_ENV=test npm run db_drop &&NODE_ENV=test npm run db_create",
     "test": "npm run recreate_db && mocha ./test/*/*.test.js",
     "server": "node main.js",
-    "debug": "nodemon main.js",
+    "debug": "NODE_ENV=development nodemon main.js",
     "start": "npm run server"
   },
   "author": "dgk",
