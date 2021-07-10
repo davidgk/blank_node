@@ -7,7 +7,7 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'test';
 const config = require(__dirname + '/config.js')[env];
 console.log( 'ENVIRONMENT:' + env )
-console.log( 'config:' + config.database )
+console.log( 'DB POINTING OUT:' + config.database )
 const models = {};
 
 let sequelize;
