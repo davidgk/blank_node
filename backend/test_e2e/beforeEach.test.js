@@ -1,4 +1,4 @@
-const { sequelize } = require('../index');
+const { sequelize } = require('../config');
 beforeEach(async function () {
 		await sequelize.sync()
 		let sql = 'TRUNCATE ';

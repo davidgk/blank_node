@@ -5,7 +5,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'test';
-const config = require(__dirname + '/config/config.js')[env];
+const config = require(__dirname + '/config.js')[env];
 const models = {};
 
 let sequelize;
@@ -29,7 +29,7 @@ fs.readdirSync('./models')
 	})
 	.forEach(file => {
 		// eslint-disable-next-line security/detect-non-literal-require
-		const modelFile = require(path.join(__dirname + '/models', file));
+		const modelFile = require(path.join(__dirname + '/../models', file));
 		const model = modelFile(sequelize, Sequelize.DataTypes);
 		models[model.name] = model;
 	});
