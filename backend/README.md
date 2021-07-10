@@ -14,6 +14,21 @@ npm run recreate_db
 
 ```
 
-* Create a Model:
+## For production
 
-sequelize-cli model:generate --name User --attributes firstName:string,lastName:string,email:string
+```
+ NODE_ENV=production npm run db_create
+ NODE_ENV=production npm run db_migrate
+ npm run start
+```
+
+
+## From Docker ( Broken : TO be fixed)
+
+Will need prod DB up and migrated 
+
+```
+    dkc up -d --no-recreate backend
+```
+
+
