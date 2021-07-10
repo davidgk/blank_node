@@ -1,6 +1,6 @@
 ## Example blank project for start new stuffs
   
-this project use sequelize, docker , docker compose
+this project use sequelize (with postgres) , docker , docker compose
 
 ### To run tests
  

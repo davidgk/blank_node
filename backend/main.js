@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const {loadRoutes} = require("./config/routes");
 const PORT = process.env.PORT || 4000;
 console.log('PORT:'+ PORT)
 const app = express();
@@ -13,4 +14,7 @@ const load = () => app.listen(PORT, err => {
 	console.log(`Blank app running on http://localhost:${PORT}`);
 });
 load();
+
+loadRoutes(app)
+
 module.exports = {load, app}

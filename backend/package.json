@@ -11,6 +11,7 @@
     "recreate_db": " NODE_ENV=test npm run db_drop &&NODE_ENV=test npm run db_create",
     "test": "npm run recreate_db && mocha ./test/*/*.test.js",
     "server": "node main.js",
+    "debug": "nodemon main.js",
     "start": "npm run server"
   },
   "author": "dgk",
