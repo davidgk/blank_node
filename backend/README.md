@@ -1,5 +1,12 @@
 ## Backend
 
+### Previously
+
+```
+ docker-compose up -d -no-recreate db  
+```                  
+Create the DB, and then you should create and migrate dbs by environment
+
 ### Useful commands
 
 * Create the drop old db test and recreate with migrations ( test) 

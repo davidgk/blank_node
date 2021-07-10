@@ -4,10 +4,11 @@ this project use sequelize (with postgres) , docker , docker compose
 
 ### To run tests
  
-1.- Be sure db is up and running 
-
 ```
     docker-compose up -d --no-recreate db
+    cd backend
+    npm run recreate_db
+    npm run db_migrate
     npm run test
 ```
 
