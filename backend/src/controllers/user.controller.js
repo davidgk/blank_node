@@ -1,4 +1,11 @@
+const { User } = require('../../config/dbConfig');
 
+
+const create = async(req, res) => {
+	console.log(req)
+	const body = req.body;
+	res.send((await User.create(body)).dataValues);
+};
 
 const list = async(req, res) => {
 	res.send( [
@@ -6,7 +13,7 @@ const list = async(req, res) => {
 		{id:2 , name: 'mony', email:'mony@gmail.com'}
 	]);
 	res.status = 200
-}
+};
 
 
-module.exports = {list}
+module.exports = {list, create}

@@ -6,6 +6,13 @@
 
 npm run recreate_db
 
+## For development
+
+```
+ NODE_ENV=development npm run db_create
+ NODE_ENV=development npm run db_migrate
+
+```
 
 * Create a Model:
 

@@ -4,5 +4,6 @@ module.exports = {
 	loadRoutes : (app) => {
 		// USERS
 		app.get('/users', usersControllers.list);
+		app.post('/users', usersControllers.create);
 	}
 }
