@@ -1,0 +1,40 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "blank Starter example",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development npm run test && NODE_ENV=development nodemon ./main.js",
+    "db_drop": "sequelize-cli db:drop",
+    "db_migrate": "sequelize-cli db:migrate",
+    "db_create": "sequelize-cli db:create",
+    "recreate_db": " NODE_ENV=test npm run db_drop &&NODE_ENV=test npm run db_create",
+    "test": "npm run recreate_db && mocha ./test/*/*.test.js",
+    "server": "node main.js",
+    "start": "npm run server"
+  },
+  "author": "dgk",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "custom-env": "^2.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "npx": "^10.2.2",
+    "pg": "^8.6.0",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.12",
+    "nyc": "^15.1.0",
+    "sequelize-cli": "^6.2.0",
+    "sinon": "^10.0.0",
+    "supertest": "^6.1.3"
+  }
+}
